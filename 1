@@ -1,0 +1,13 @@
+ hadoop dfs -rm -r /usr/local/hadoop/input
+
+
+ hadoop dfs -rm -r /usr/local/hadoop/output
+
+hadoop dfs -mkdir -p /usr/local/hadoop/input
+
+hadoop dfs -copyFromLocal /home/hduser/input.txt /usr/local/hadoop/input
+
+hadoop jar jarname packagename.classname /usr/local/hadoop/input /usr/local/hadoop/output
+
+hadoop dfs -cat /usr/local/hadoop/output/part-r-00000
+
